@@ -1,0 +1,38 @@
+body{
+    font-family: sans-serif;
+}
+
+.container{
+    background-color: white;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.formtitle {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    padding: 16px;
+}
+
+input[type=email], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    width: 100%;
+}
+
+span.forgotpassword {
+    padding-top: 16px;
+}
