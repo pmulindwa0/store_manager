@@ -135,7 +135,10 @@ ul.nav li a.active{
     margin-bottom: 20px;
 }
 
-.add-to-cart {
+.add-to-cart,
+.view-details,
+.delete-product-btn
+.edit-product-btn {
     margin: 10px 0;
 }
 
@@ -180,6 +183,7 @@ ul.nav li a.active{
     .columns:first-child {
       margin-left: 0; }
     .four.columns{ width: 30.6666666667%; }
+    .seven.columns{ width: 56.6666666667%; }
 }
 
 @media (min-width: 550px) {
