@@ -18,7 +18,9 @@ body{
     padding: 16px;
 }
 
-input[type=email], input[type=password] {
+input[type=email], 
+input[type=password],
+input[type=number] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -60,13 +62,22 @@ input[type="button"].button-primary {
   border-color: #33C3F0;
  }
 
- .button.button-secondary,
+.button.button-secondary,
 button.button-secondary,
 input[type="submit"].button-secondary,
 input[type="button"].button-secondary {
   color: #FFF;
   background-color: #4CAF50;
   border-color: #4CAF50;
+ }
+
+.button.button-danger,
+button.button-danger,
+input[type="submit"].button-danger,
+input[type="button"].button-danger {
+  color: #FFF;
+  background-color: rgb(241, 34, 34);
+  border-color: rgb(241, 34, 34);
  }
 
 span.forgotpassword {
@@ -135,7 +146,10 @@ ul.nav li a.active{
     margin-bottom: 20px;
 }
 
-.add-to-cart {
+.add-to-cart,
+.view-details,
+.delete-product-btn
+.edit-product-btn {
     margin: 10px 0;
 }
 
@@ -159,7 +173,41 @@ ul.nav li a.active{
     font-weight: 700;
     font-size: 22px;
 }
+/* styling the modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4)
+}
 
+.modal-content{
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    width: 40%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
 /* media queries */
 @media screen and (max-width: 600px){
     ul.nav li.right,
@@ -180,6 +228,7 @@ ul.nav li a.active{
     .columns:first-child {
       margin-left: 0; }
     .four.columns{ width: 30.6666666667%; }
+    .seven.columns{ width: 56.6666666667%; }
 }
 
 @media (min-width: 550px) {
