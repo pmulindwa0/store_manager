@@ -11,6 +11,7 @@
     <header>
         <ul class="nav">
             <li><a class="active" href="products.html">Products</a></li>
+            <li><a href="new-product.html">Create product</a></li>
             <li><a href="register.html">Register users</a></li>
             <li><a href="records.html">Sales Records</a></li> 
             <li class="pullright"><a href="index.html">Signout</a></li> 
@@ -92,21 +93,21 @@
                 </div>
             </div>
         </div>
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <form action="records.html" method="post">
-                    <div class="formtitle">
-                        <h3>Create Sales</h3>
-                    </div>
-        
-                    <label for="quantity">Quantity Required</label>
-                    <input type="number" name="quantity" id="quantity" placeholder="Enter quantity" required>
-                    <button type="submit" class="button-secondary">Make sale</button>
-                </form>
-            </div>
-        </div>
     </section>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form action="records.html" method="post">
+                <div class="formtitle">
+                    <h3>Create Sales</h3>
+                </div>
+    
+                <label for="quantity">Quantity Required</label>
+                <input type="number" name="quantity" id="quantity" placeholder="Enter quantity" required>
+                <a type="button" href="records.html" id="create_salebtn" class="button button-secondary">Make sale</button>
+            </form>
+        </div>
+    </div>
     <script src="../assets/js/main.js"></script>
 </body>
 </html>

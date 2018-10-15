@@ -1,6 +1,5 @@
 let modal = document.getElementById('myModal');
 const productList = document.querySelector('#product-list');
-let addToCart = document.getElementById('addToCart');
 let closeBtn = document.getElementsByClassName("close")[0];
 
 productList.addEventListener('click', saleProduct);
