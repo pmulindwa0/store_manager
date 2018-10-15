@@ -20,7 +20,8 @@ body{
 
 input[type=email], 
 input[type=password],
-input[type=number] {
+input[type=number],
+input[type=text] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -207,6 +208,21 @@ ul.nav li a.active{
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+.section-body{
+    background-color: white;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td{
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even){
+    background-color: #f2f2f2;  
 }
 /* media queries */
 @media screen and (max-width: 600px){
