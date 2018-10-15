@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>Store manager: Register</title>
+</head>
+<body>
+    <header>
+        <ul class="nav">
+            <li><a class="active" href="products.html">Products</a></li>
+            <li><a href="register.html">Register users</a></li>
+            <li><a href="records.html">Sales Records</a></li> 
+            <li class="pullright"><a href="index.html">Signout</a></li> 
+        </ul>
+    </header>
+    <section>
+        <div id="product-list" class="section">
+            <h1 class="heading">
+                Register new attendant
+            </h1>
+            <div class="container">
+                <form action="products.html" method="post">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter full name" required>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter email" required>
+        
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Password" required>
+        
+                    <button type="submit" class="button-secondary">Register</button>
+                </form>
+            </div>    
+        </div>
+    </section>
+</body>
+</html>
