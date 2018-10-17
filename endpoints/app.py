@@ -25,5 +25,9 @@ def get_products():
 def create_product():
     return jsonify({'product': product.create_pdt()}), 201
 
+@app.route('/store_manager/api/v1/user/products/<int:pdt_id>', methods=['GET'])
+def get_product(pdt_id):
+    return jsonify({'product': product.get_pdt(pdt_id)})
+
 if __name__ == '__main__':
     app.run(debug=True, port=8080)

@@ -34,3 +34,11 @@ class Products:
         self.all_products.append(new_pdt)
         return new_pdt
 
+    def get_pdt(self, pdt_id):
+        pdt =  [pdt for pdt in self.all_products if pdt['id'] == pdt_id]
+
+        if len(pdt) ==0:
+            abort(404)
+
+        return pdt
+
