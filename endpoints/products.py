@@ -23,3 +23,14 @@ class Products:
     def get_all_products(self):
         return self.all_products
 
+    def create_pdt(self):
+        new_pdt = {
+            'id': self.all_products[-1]['id'] + 1,
+            'name': request.json['name'],
+            'quantity': request.json['quantity'],
+            'ammount': request.json['ammount'],
+            'image': request.json['image']
+        }
+        self.all_products.append(new_pdt)
+        return new_pdt
+

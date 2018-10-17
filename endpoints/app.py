@@ -21,5 +21,9 @@ def not_found(error):
 def get_products():
     return jsonify({'products': product.get_all_products()}), 200
 
+@app.route('/store_manager/api/v1/admin/products', methods=['POST'])
+def create_product():
+    return jsonify({'product': product.create_pdt()}), 201
+
 if __name__ == '__main__':
     app.run(debug=True, port=8080)
