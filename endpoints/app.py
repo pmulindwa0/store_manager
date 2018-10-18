@@ -1,10 +1,11 @@
 from flask import Flask, jsonify, request, abort, make_response
 from products import Products
+from sales import Sales
 
 app = Flask(__name__)
 
 product = Products()
-
+sales = Sales()
 # Error Handling
 
 @app.errorhandler(400)
@@ -28,6 +29,10 @@ def create_product():
 @app.route('/store_manager/api/v1/user/products/<int:pdt_id>', methods=['GET'])
 def get_product(pdt_id):
     return jsonify({'product': product.get_pdt(pdt_id)})
+
+@app.route('/store_manager/api/v1/admin/sales', methods=['GET'])
+def get_sales():
+    return jsonify({'sales': sales.all_sales()}), 200
 
 if __name__ == '__main__':
     app.run(debug=True, port=8080)
