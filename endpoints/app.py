@@ -34,5 +34,9 @@ def get_product(pdt_id):
 def get_sales():
     return jsonify({'sales': sales.all_sales()}), 200
 
+@app.route('/store_manager/api/v1/user/sales', methods=['POST'])
+def create_sale():
+    return jsonify({'sale': sales.add_sale()}), 201
+
 if __name__ == '__main__':
     app.run(debug=True, port=8080)
