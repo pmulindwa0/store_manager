@@ -28,7 +28,7 @@ def create_product():
 
 @app.route('/store_manager/api/v1/user/products/<int:pdt_id>', methods=['GET'])
 def get_product(pdt_id):
-    return jsonify({'product': product.get_pdt(pdt_id)})
+    return jsonify({'product': product.get_pdt(pdt_id)}), 200
 
 @app.route('/store_manager/api/v1/admin/sales', methods=['GET'])
 def get_sales():
@@ -37,6 +37,10 @@ def get_sales():
 @app.route('/store_manager/api/v1/user/sales', methods=['POST'])
 def create_sale():
     return jsonify({'sale': sales.add_sale()}), 201
+
+@app.route('/store_manager/api/v1/user/sales/<int:sales_id>', methods=['GET'])
+def get_sale(sales_id):
+    return jsonify({'product': sales.get_sale(sales_id)})
 
 if __name__ == '__main__':
     app.run(debug=True, port=8080)

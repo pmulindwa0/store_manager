@@ -26,3 +26,10 @@ class Sales:
         }
         self.sales_list.append(new_sale)
         return new_sale
+
+    def get_sale(self, sale_id):
+        sale = [sale for sale in self.sales_list if sale['id']==sale_id]
+
+        if len(sale) == 0:
+            abort(404)
+        return sale
