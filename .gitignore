@@ -2,3 +2,4 @@
 assets/.DS_Store
 endpoints/store-manager-api/
 endpoints/__pycache__/
+store-manager-api/
